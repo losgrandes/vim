@@ -42,3 +42,6 @@ map <F2> :tabe ~/.vim/helper.txt<CR>
 Bundle 'ctrlp.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'molokai'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'omniperl'
+Bundle 'Javascript-OmniCompletion-with-YUI-and-j'

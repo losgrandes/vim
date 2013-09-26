@@ -45,3 +45,6 @@ Bundle 'molokai'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'omniperl'
 Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
+Bundle 'bling/vim-airline'
+
+colorscheme molokai

@@ -1,4 +1,5 @@
 let mapleader=","
+syntax on
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
@@ -46,5 +47,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'omniperl'
 Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
 Bundle 'bling/vim-airline'
+Bundle 'ctags.vim'
 
 colorscheme molokai
+let g:rehash256 = 1

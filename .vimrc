@@ -1,5 +1,11 @@
 let mapleader=","
+let perl_fold=1
 syntax on
+set foldmethod=syntax
+set hls
+set ts=6
+set softtabstop=4
+set expandtab
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
@@ -24,7 +30,7 @@ set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
 set laststatus=2
-set statusline=%F%m%r%h%w\ (%{&ff}){%Y}[%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+" set statusline=%F%m%r%h%w\ (%{&ff}){%Y}[%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 " vim: ft=vim foldmethod=marker
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -37,17 +43,24 @@ filetype plugin indent on
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 nnoremap <leader>1 yypVr=kyyPVr=j
-map <F2> :tabe ~/.vim/helper.txt<CR> 
+map <F2> :TlistToggle<CR>
 
 " bundles
 Bundle 'ctrlp.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'molokai'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'omniperl'
 Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
-Bundle 'bling/vim-airline'
+" Bundle 'bling/vim-airline'
+" Bundle 'Lokaltog/vim-powerline'
 Bundle 'ctags.vim'
+Bundle 'taglist.vim'
 
+let Tlist_Ctags_Cmd='~/download/ctags-5.8/ctags'
 colorscheme molokai
 let g:rehash256 = 1
+set tags=~/tags
+let g:ctags_statusline=1
+let Tlist_Process_File_Always = 1
+set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v]%p%%\ line\ %l\ of\ %L[\%{Tlist_Get_Tagname_By_Line()}]

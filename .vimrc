@@ -1,7 +1,7 @@
 let mapleader=","
-let perl_fold=1
+" let perl_fold=1
 syntax on
-set foldmethod=syntax
+" set foldmethod=syntax
 set hls
 set ts=6
 set softtabstop=4
@@ -30,8 +30,6 @@ set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
 set laststatus=2
-" set statusline=%F%m%r%h%w\ (%{&ff}){%Y}[%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-" vim: ft=vim foldmethod=marker
 set nocompatible               " be iMproved
 filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle
@@ -47,20 +45,15 @@ map <F2> :TlistToggle<CR>
 
 " bundles
 Bundle 'ctrlp.vim'
-Bundle 'The-NERD-Commenter'
 Bundle 'molokai'
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'omniperl'
-Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
-" Bundle 'bling/vim-airline'
-" Bundle 'Lokaltog/vim-powerline'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'ctags.vim'
 Bundle 'taglist.vim'
+Bundle 'rdnetto/YCM-Generator'
 
-let Tlist_Ctags_Cmd='~/download/ctags-5.8/ctags'
 colorscheme molokai
 let g:rehash256 = 1
-set tags=~/tags
+set tags=~/dev/tags
 let g:ctags_statusline=1
 let Tlist_Process_File_Always = 1
 set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v]%p%%\ line\ %l\ of\ %L[\%{Tlist_Get_Tagname_By_Line()}]

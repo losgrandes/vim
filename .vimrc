@@ -57,3 +57,4 @@ set tags=~/dev/tags
 let g:ctags_statusline=1
 let Tlist_Process_File_Always = 1
 set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v]%p%%\ line\ %l\ of\ %L[\%{Tlist_Get_Tagname_By_Line()}]
+cs add ~/dev/cscope.out

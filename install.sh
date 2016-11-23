@@ -9,7 +9,7 @@ cd ~/.vim/plugin/
 wget -nc http://cscope.sourceforge.net/cscope_maps.vim
 cd ~/dev
 ctags -R
-cscope -bR
+find ~/dev/* -maxdepth 0 -type d -exec sh -c "cd {} && cscope -bR" \;
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py --clang-completer

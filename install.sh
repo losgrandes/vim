@@ -14,4 +14,4 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py --clang-completer
 cd ~/.vim/bundle/YCM-Generator
-find ~/dev/* -maxdepth 0 -type d | xargs -I{} ./config_gen.py {}
+find ~/dev/* -maxdepth 0 -type d | xargs -I{} ./config_gen.py -f {}

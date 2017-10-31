@@ -51,10 +51,6 @@ Bundle 'scrooloose/syntastic'
 map <F2> :TlistToggle<CR>
 set pastetoggle=<F3>
 
-" Colorscheme 
-colorscheme molokai
-let g:rehash256 = 1
-
 set tags=tags;/                     " Look for tags file from current dir up to root
 "let g:ctags_statusline=1            " Looks like not needed
 let Tlist_Process_File_Always = 1   " Process tags in file while opening

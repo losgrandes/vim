@@ -42,7 +42,8 @@ Bundle 'ctrlp.vim'
 Bundle 'molokai'
 Bundle 'ctags.vim'
 Bundle 'taglist.vim'
-Bundle 'scrooloose/syntastic'
+" Syntax checking
+Bundle 'w0rp/ale'
 "*************************
 " Vundle configuration END
 "*************************
@@ -50,6 +51,7 @@ Bundle 'scrooloose/syntastic'
 " mappings
 map <F2> :TlistToggle<CR>
 set pastetoggle=<F3>
+autocmd FileType python nnoremap <F10> :0,$!yapf<CR>
 
 set tags=tags;/                     " Look for tags file from current dir up to root
 "let g:ctags_statusline=1            " Looks like not needed
@@ -58,16 +60,3 @@ let Tlist_Process_File_Always = 1   " Process tags in file while opening
 " The one and the only...status line!
 set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v]%p%%\ line\ %l\ of\ %L[\%{Tlist_Get_Tagname_By_Line()}]
 
-"***********************
-" Syntastic config START
-"***********************
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1  " Extra window at the bottom with pylint errors
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"*********************
-" Syntastic config END
-"*********************

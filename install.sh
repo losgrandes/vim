@@ -26,7 +26,7 @@ if [ -L $VIMRC_LINK ];then
     exit
 fi
 
-sudo apt-get install vim vim-nox exuberant-ctags pylint 
+sudo apt-get install vim vim-nox exuberant-ctags pylint yapf yapf3 
 ln -s $VIMRC $VIMRC_LINK
 vim +BundleInstall +qall
 echo "\" Colorscheme" >> $VIMRC_LINK

@@ -4,7 +4,7 @@ let perl_fold = 1                   " Enable perl folding
 let python_highlight_all=1
 set hlsearch                        " Highlight searches
 set incsearch                       " show search matches as you type
-set softtabstop=4                   " Use 4 spaces for TAB
+set tabstop=4                       " Use 4 spaces for TAB
 set expandtab                       " Always use spaces instead of TAB
 set autoindent                      " always set autoindenting on
 set nowrap                          " don't wrap lines

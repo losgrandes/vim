@@ -29,9 +29,6 @@ fi
 sudo apt-get install vim vim-nox exuberant-ctags pylint 
 ln -s $VIMRC $VIMRC_LINK
 vim +BundleInstall +qall
-echo "\" Colorscheme" >> $VIMRC_LINK
-echo "colorscheme molokai" >> $VIMRC_LINK
-echo "let g:rehash256 = 1" >> $VIMRC_LINK
 
 if [ ! -z $PROJECTS_PATH ];then
     echo -n "Running ctags for $PROJECTS_PATH"

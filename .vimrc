@@ -47,6 +47,10 @@ Bundle 'scrooloose/syntastic'
 " Vundle configuration END
 "*************************
 
+" Colorscheme
+colorscheme molokai
+let g:rehash256 = 1
+
 " mappings
 map <F2> :TlistToggle<CR>
 set pastetoggle=<F3>

@@ -5,7 +5,9 @@ losgrandes' vim conf
 * mkdir ~/.vim/
 * cd ~/.vim/
 * git clone https://github.com/losgrandes/vim.git .
-* ./install.sh
+* ./install.sh -p PATH_TO_YOUR_CODE
+
+By providing -p to install.sh you'll trigger ctags -R over PATH_TO_YOUR_CODE.
 
 ## Usage
 F2 - toggle list of classes, members, functions
